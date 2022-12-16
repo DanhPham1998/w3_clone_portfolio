@@ -1,0 +1,361 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Lato", sans-serif;
+    font-size: 15px;
+    height: 100%;
+    width: 100%;
+    line-height: 1.8;
+}
+body {
+    height: 100%;
+    color: #777;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #777777;
+}
+
+h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+h4 {
+    font-size: 24px;
+}
+button {
+    font-size: 15px;
+    border: none;
+    font-family: "Lato", sans-serif;
+    line-height: 1.8;
+}
+#main {
+    height: 100%;
+}
+.color-black {
+    color: red;
+}
+
+/* Common */
+.pd-8-16 {
+    padding: 8px 16px;
+}
+.pd-12-24 {
+    padding: 12px 24px;
+}
+.row-2 {
+    display: flex;
+}
+
+.mtb {
+    margin: 15px 0px;
+}
+
+/* header */
+
+#header {
+    display: flex;
+    position: fixed;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    background-color: unset;
+    height: 43px;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.navbar {
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar-item {
+    padding: 0px 16px;
+    text-transform: uppercase;
+}
+
+.navbar-item i {
+    width: 15px;
+    height: 15px;
+    padding-right: 4px;
+    font-size: inherit;
+    line-height: 43px;
+}
+
+.navbar-item:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.scroll-header {
+    background-color: #fff !important;
+    animation: scrollHead ease 0.6s;
+}
+@keyframes scrollHead {
+    from {
+        transform: translateY(-46px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.top-search {
+    padding: 13px 16px;
+}
+
+.top-search:hover {
+    color: #fff;
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#slide-sologan {
+    position: relative;
+    min-height: 100%;
+    background-image: url("./../img/parallax1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.75;
+}
+
+.slide-title {
+    white-space: nowrap;
+    position: absolute;
+    color: #fff;
+    background-color: #000;
+    letter-spacing: 10px;
+    padding: 12px 24px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Content */
+.content-section {
+    width: 980px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+.content-header {
+    text-align: center;
+    margin: 10px 0px;
+    font-weight: 400;
+}
+
+.content-sub-header {
+    text-align: center;
+    margin: 15px 0px;
+    font-style: italic;
+}
+
+.content-text {
+    margin: 15px 0px;
+}
+
+.about-focus {
+    display: flex;
+    width: 100%;
+}
+
+.about-me {
+    flex: 1;
+}
+.about-me-name {
+    text-align: center;
+    margin: 15px 0px;
+    font-weight: 600;
+}
+.about-me-name i {
+    margin-right: 16px;
+}
+.about-introduce {
+    flex: 1;
+    margin: 15px 0px;
+}
+
+.about-me-img {
+    width: 100%;
+    height: 284px;
+    object-fit: cover;
+    margin-top: 32px;
+    opacity: 0.6;
+}
+
+.about-me-img:hover {
+    opacity: 1;
+}
+.skill {
+    margin: 18px 0px;
+}
+.skill-name {
+    margin: 15px 0px;
+    letter-spacing: 10px;
+}
+.skill-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    padding: 16px 0px;
+}
+.skill-processbar {
+    background-color: #f1f1f1;
+    height: 35px;
+    width: 100%;
+}
+.skill-processing {
+    background-color: #616161;
+    height: 100%;
+    width: var(--percent);
+    color: #fff;
+}
+.skill-percent {
+    line-height: 35px;
+    text-align: center;
+}
+
+#archivement {
+    display: flex;
+    background-color: #616161;
+    min-height: 134px;
+    padding: 16px 0px;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+
+.archivement-item {
+    text-align: center;
+}
+.archivement-item span {
+    font-size: 24px;
+}
+
+/* Slide Portfolio */
+#slide-portfolio {
+    position: relative;
+    min-height: 300px;
+    background-image: url("../img/parallax2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.75;
+}
+#slide-portfolio > .slide-title {
+    background-color: unset;
+    font-size: 36px;
+}
+.work-list {
+    display: flex;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 47px;
+}
+.work-item {
+    width: 25%;
+    padding: 0px 8px;
+    height: 163px;
+    margin-bottom: 16px;
+}
+.work-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-img:hover {
+    cursor: pointer;
+    opacity: 0.75;
+}
+
+.load-more {
+    text-align: center;
+    margin-top: 48px;
+}
+.btn-load-more {
+    padding: 12px 24px;
+    color: #000!;
+    background-color: #f1f1f1;
+}
+.modal-img {
+    position: fixed;
+    display: none;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    padding-top: 100px;
+}
+
+/* Modal Img Zoom */
+.modal-img-zoom {
+    margin: 0 auto;
+    width: 600px;
+}
+.modal-zoom {
+    text-align: center;
+    padding: 64px 0px;
+}
+
+.modal-img-close {
+    color: #fff;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+}
+
+.modal-img-close .ti-close:hover {
+    cursor: pointer;
+    color: #000 !important;
+    background-color: #ccc !important;
+}
+
+.modal-img-close .ti-close {
+    padding: 15px 15px;
+}
+
+.img-zoom {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+    animation: imgZoomAnimation ease 0.5s;
+}
+.caption-img {
+    font-size: 18px !important;
+    font-weight: 500;
+    line-height: 1.8;
+    margin: 16px 0px;
+    text-size-adjust: 100%;
+}
+
+@keyframes imgZoomAnimation {
+    from {
+        width: 0px;
+        height: 0px;
+    }
+    to {
+        width: 400px;
+        height: 300px;
+    }
+}
